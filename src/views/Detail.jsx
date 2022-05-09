@@ -27,10 +27,25 @@ export default function Detail() {
           <img
             src={park.images[0].url}
             alt={park.images[0].altText}
-            style={{ width: '450px' }}
+            style={{ width: '75%' }}
           />
           <p>{park.images[0].caption}</p>
-          <p>Weather Info: {park.weatherInfo}</p>
+          <img
+            src={park.images[1].url}
+            alt={park.images[1].altText}
+            style={{ width: '75%' }}
+          />
+          <p>{park.images[1].caption}</p>
+          <img
+            src={park.images[2].url}
+            alt={park.images[2].altText}
+            style={{ width: '75%' }}
+          />
+          <p>{park.images[2].caption}</p>
+          <p>
+            <span style={{ fontWeight: 'bold' }}>Weather Info:</span>{' '}
+            {park.weatherInfo}
+          </p>
         </>
       )}
     </div>
