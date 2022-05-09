@@ -23,7 +23,7 @@ export default function Home() {
           <ul>
             {parks.map((park) => (
               <li key={park.id}>
-                <Link to={`/park/${park.id}`}>{park.fullName}</Link>
+                <Link to={`/park/${park.parkCode}`}>{park.fullName}</Link>
               </li>
             ))}
           </ul>
