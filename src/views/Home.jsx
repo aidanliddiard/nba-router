@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import fetchParks from '../services/Parks';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
   const [parks, setParks] = useState([]);
@@ -21,7 +22,9 @@ export default function Home() {
           <h1>Welcome</h1>{' '}
           <ul>
             {parks.map((park) => (
-              <li key={park.id}>{park.fullName}</li>
+              <li key={park.id}>
+                <Link to={`/park/${park.id}`}>{park.fullName}</Link>
+              </li>
             ))}
           </ul>
         </>
