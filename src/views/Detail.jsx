@@ -5,16 +5,18 @@ import { fetchParkByCode } from '../services/Parks';
 
 export default function Detail() {
   const { parkCode } = useParams();
-  const [park, setPark] = useState([]);
+  const [park, setPark] = useState({});
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    console.log(parkCode);
     fetchParkByCode(parkCode)
       .then(setPark)
       .catch(console.error.message)
       .finally(() => setLoading(false));
-  }, []);
+  }, [parkCode]);
 
+  console.log('park', park);
   return (
     <div>
       {loading ? (

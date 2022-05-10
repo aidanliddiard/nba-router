@@ -23,9 +23,7 @@ export default function Home() {
     const state = e.target.value;
     state.toLowerCase();
 
-    history.push(
-      `/parks?stateCode=${state}&api_key=${process.env.REACT_APP_API_KEY}`
-    );
+    history.push(`/parks?stateCode=${state}`);
   };
 
   return (
