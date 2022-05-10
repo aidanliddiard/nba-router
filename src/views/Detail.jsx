@@ -26,7 +26,7 @@ export default function Detail() {
           <h5>States: {park.states}</h5>
           <p>{park.description}</p>
           {park.images.map((image) => (
-            <div key={image.title}>
+            <div key={image.url}>
               <Images image={image} />
             </div>
           ))}
